@@ -13,21 +13,20 @@
 </head>
 
 <body>
-	
+
 	<!---Top Navbar -->
 	<div id="menubar" class="container mt-3">
 		<div class="row position-relative">
 			<!-- SideMenu Togglers -->
 			<div class="col-2 d-none d-xl-block d-xxl-block">
 				<button id="toggle" type="button" class="btn text-primary fs-5">
-					<i class="bi bi-menu-button-wide"></i>
+					<i class="bi bi-grid-fill navMiniLg"></i>
 				</button>
 				<span id="collapse"></span>
 			</div>
 			<div class="col-2 d-xl-none d-xxl-none">
-				<button id="toggle2" class="btn text-primary fs-5" type="button" data-bs-toggle="offcanvas"
-					data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
-					<i class="bi bi-menu-button-wide"></i>
+				<button id="toggle2" class="btn text-primary fs-5" type="button">
+					<i class="bi bi-grid-fill"></i>
 				</button>
 			</div>
 			<!-- End SideMenu Togglers -->
@@ -116,8 +115,64 @@
 						<i class="bi bi-caret-right float-end"></i>
 					</li>
 				</ul>
-				<!--================= End of SideBar ==============-->
 			</div>
+			<!--================= Sidebar On Large & Smaller Screens ==============-->
+			<div id="sideMenu-Offcanvas" class="p-2 displayMenu">
+				<h5 class="text-primary mt-5 font-monospace text-center">Hi SANDS!😃 </h5>
+				<ul class="sidebar mt-5 text-secondary d-xl-block d-xxl-block">
+					<!--================= DropDown ==============-->
+					<li id="dash-dropDown2" class="nav-item mb-3 text-primary">
+						<span>
+							<i class="bi bi-kanban-fill"></i>
+						</span>
+						Dashboards
+						<i id="dropIcon2" class="bi bi-chevron-down float-end"></i>
+					</li>
+					<ul id="dropMenu2" class="dropMenu">
+						<li class="menu-list sideNav">Dash 1</li>
+						<li class="menu-list sideNav">Dash 2</li>
+						<li class="menu-list sideNav">Dash 3</li>
+					</ul>
+					<!--=================End of  DropDown ==============-->
+					<hr>
+					<li class="nav-item sideNav">
+						<span>
+							<i class="bi bi-calendar-week-fill"></i>
+						</span>
+						Calendar
+						<i class="bi bi-caret-right float-end"></i>
+					</li>
+					<li class="nav-item sideNav">
+						<span>
+							<i class="bi bi-chat-left-fill"></i>
+						</span>
+						Chart
+						<i class="bi bi-caret-right float-end"></i>
+					</li>
+					<li class="nav-item sideNav">
+						<span>
+							<i class="bi bi-calendar3-event-fill"></i>
+						</span>
+						Events
+						<i class="bi bi-caret-right float-end"></i>
+					</li>
+					<li class="nav-item sideNav">
+						<span>
+							<i class="bi bi-door-closed-fill"></i>
+						</span>
+						Activity log
+						<i class="bi bi-caret-right float-end"></i>
+					</li>
+					<li class="nav-item sideNav">
+						<span>
+							<i class="bi bi-envelope-fill"></i>
+						</span>
+						Emails
+						<i class="bi bi-caret-right float-end"></i>
+					</li>
+				</ul>
+			</div>
+			
 			<!--================= Body Contents ==============-->
 			<div id="mainContent" class="col vh-100 rounded-3">
 				<div class="row statsContainer justify-content-around mt-2 p-2 text-center text-danger">
@@ -133,21 +188,8 @@
 	</div>
 	<!---  End of  Main Container   -->
 
-	<div class="offcanvas offcanvas-top bg-dblue" tabindex="-1" id="offcanvasTop"
-		aria-labelledby="offcanvasTopLabel">
-		<div class="offcanvas-header">
-			<h5 id="offcanvasTopLabel" class="text-primary font-monospace">WELCOME BACK SANDS!😃 </h5>
-		</div>
-		<div class="offcanvas-body">
-
-		</div>
-	</div>
 	<!-- JavaScript Bundle with Popper -->
 	<script async src="./theme.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-		integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-		crossorigin="anonymous"></script>
-	<script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-a11y="true"></script>
 	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 	<script src="./index.js"></script>
 </body>

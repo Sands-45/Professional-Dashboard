@@ -33,7 +33,6 @@ body{
   transition: background .5s;
 }
 /* ================Top Menu ===========*/
-
 #toggle:hover, #controls:hover, #toggle2:hover {
   transform: scale(0.95);
 }

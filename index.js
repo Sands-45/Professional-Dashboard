@@ -4,15 +4,9 @@ let dropDownIcon = document.getElementById("dropIcon");
 
 dashDropDown.addEventListener("click", () => {
   dashDropMenu = document.querySelector("#dropMenu");
+  dropDownIcon = document.getElementById("dropIcon");
   dashDropMenu.classList.toggle("dropHS");
-  let state = "dropHS";
-  if (dashDropMenu.classList == state) {
-    dropDownIcon = document.getElementById("dropIcon").style.transform =
-      "rotate(-180deg)";
-  } else {
-    dropDownIcon = document.getElementById("dropIcon").style.transform =
-      "rotate(0deg)";
-  }
+  dropDownIcon.classList.toggle("rotate");
 });
 
 /* ============= Active Tab =============*/
@@ -31,6 +25,7 @@ const toggleSideBtn = document.getElementById("toggle");
 toggleSideBtn.addEventListener("click", () => {
   let sideNav = document.getElementById("sideNav");
   let mainContent = document.getElementById("mainContent");
+  let navControlLg = document.querySelector(".navMiniLg");
   let collapse = document.getElementById("collapse");
   collapse.classList.toggle("active");
   let colNav = "active";
@@ -40,12 +35,31 @@ toggleSideBtn.addEventListener("click", () => {
     sideNav.style.opacity = "0";
     mainContent.style.width = "97%";
     mainContent.style.zIndex = "1";
+    navControlLg.classList.remove("bi-grid-fill");
+    navControlLg.classList.add("bi-grid-1x2-fill");
   } else {
     sideNav.style.width = "16.66666667%";
     sideNav.style.opacity = "1";
     sideNav.style.zIndex = "0";
     mainContent.style.zIndex = "0";
     mainContent.style.width = "83.33333333%";
+    navControlLg.classList.remove("bi-grid-1x2-fill");
+    navControlLg.classList.add("bi-grid-fill");
   }
 });
+/* ==============OffMenu Canvas ==================*/
+const toggleOffcanvas = document.getElementById("toggle2");
+let sideMenuOffcanvas = document.getElementById("sideMenu-Offcanvas");
 
+toggleOffcanvas.addEventListener("click", () => {
+  sideMenuOffcanvas.classList.toggle("displayMenu");
+});
+
+const dashDropDown2 = document.querySelector("#dash-dropDown2");
+let dashDropMenu2 = document.querySelector("#dropMenu2");
+let dropDownIcon2 = document.getElementById("dropIcon2");
+
+dashDropDown2.addEventListener("click", () => {
+  dashDropMenu2.classList.toggle("dropHS");
+  dropDownIcon2.classList.toggle("rotate");
+});
