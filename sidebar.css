@@ -49,6 +49,11 @@ ul .active {
   transition: transform 0.5s;
 }
 
+.divider{
+  position: relative;
+  top:-10%;
+}
+
 #mainContent,
 #sideNav {
   transition: width 0.3s, opacity 0.2s;
@@ -65,7 +70,7 @@ ul .active {
   background: #0a172691;
   height: 100vh;
   width: 15rem;
-  z-index: 1;
+  z-index: 11;
   border-radius: 0.5rem;
   transition: width 0.5s, opacity 0.4s, background 0.4s;
 }
