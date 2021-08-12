@@ -1,0 +1,12 @@
+.stats{
+	height: 10rem;
+	background: var(--primary-1);
+	border-radius: .5rem;
+	transition:  background .5s;
+}
+.statsContainer .col-6{
+	width: 48.5%;
+}
+.charts{
+	height: 22rem;
+}

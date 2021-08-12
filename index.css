@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
+@import "./sidebar.css";
+@import "./stats.css";
+:root {
+  --dark-blue: #0a1726;
+  --lightTheme:#bee3db;
+  --primary-1: #131f2d;
+  --primary-2: #344050;
+  --hover: #2d73ce;
+}
+.bg-dblue{
+  background: var(--dark-blue);
+}
+.bg-lightTheme{
+  background: var(--lightTheme);
+}
+
+*,
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+body{
+  background:var(--dark-blue);
+  transition: background .5s;
+}
+/* ================Top Menu ===========*/
+
+#toggle:hover, #controls:hover, #toggle2:hover {
+  transform: scale(0.95);
+}
+
+#addon-wrapping {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border: solid 0.05rem var(--primary-2);
+}
+#searchBar {
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border: solid 0.05rem var(--primary-2);
+}
+#controls, #toggle,#toggle2 {
+  height: 2.5rem;
+  width: 2.5rem;
+  padding:0px;
+  border-radius: 50%;
+  margin: 0.1rem;
+  border: solid 0.01rem var(--primary-2);
+  transition: transform 0.3s;
+}
+
+#user img {
+  width: 2.3rem;
+}
+#logo{
+  z-index: 1;
+}
+/* ==================== End Of Top Menu =============*/

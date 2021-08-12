@@ -1,0 +1,52 @@
+.sidebar .nav-item {
+  list-style: none;
+  line-height: 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: transform 0.5s, color .3s;
+  z-index: 1;
+}
+
+.sidebar li:hover, #dropMenu li:hover{
+  color: var(--hover);
+  transform: scale(.95);
+}
+
+ul .active {
+  color: var(--hover);
+}
+
+.sidebar{
+  padding-left: 0px;
+}
+
+/* ====DropDown Menu ======*/
+.dropMenu {
+  transform: scale(0);
+  height: 0px;
+  opacity: 0;
+  transition: height 0.5s;
+}
+.dropHS {
+  transform: scale(1);
+  height: 100px;
+  opacity: 1;
+  transition: height 100% 0.5s;
+}
+
+#dropMenu li {
+  line-height: 2rem;
+  z-index: -1;
+  cursor: pointer;
+  transition: transform 0.5s, width 0.2s;
+}
+
+#dash-dropDown #dropIcon {
+  transform: rotate(0deg);
+  transition: transform 0.5s;
+}
+
+#mainContent,
+#sideNav {
+  transition: width 0.3s, opacity 0.2s;
+}
