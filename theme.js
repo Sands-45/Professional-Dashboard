@@ -4,6 +4,7 @@ let theme = localStorage.getItem("theme");
 
 function lightTheme() {
   document.body.style.background = "#e0fbfc";
+  document.getElementById("sideMenu-Offcanvas").style.background = "#e0fbfc8f";
   document
     .querySelectorAll(".stats")
     .forEach((el) => (el.style.background = "#bee3db"));
@@ -17,6 +18,7 @@ function lightTheme() {
 
 function darkTheme() {
   document.body.style.background = "#0a1726";
+  document.getElementById("sideMenu-Offcanvas").style.background = "#0a172691";
   document
     .querySelectorAll(".stats")
     .forEach((el) => (el.style.background = "#131f2d"));
