@@ -36,6 +36,7 @@
 	border-radius: 0.5rem;
 	width:7rem;
 	display: none;
+	z-index: 99;
 }
 #user_settings li{
 	list-style: none;
