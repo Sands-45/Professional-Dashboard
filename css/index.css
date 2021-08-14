@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap');
 @import "./sidebar.css";
 @import "./controls.css";
-@import "./stats.css";
+@import "./charts.css";
 :root {
   --dark-blue: #0a1726;
   --lightTheme:#bee3db;

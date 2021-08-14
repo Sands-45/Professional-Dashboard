@@ -11,5 +11,8 @@
 	width: 48.5%;
 }
 .charts{
-	height: 21rem;
+	width: 48.5%;
+	background: var(--primary-1);
+	border-radius: .5rem;
+	transition:  background .5s;
 }
