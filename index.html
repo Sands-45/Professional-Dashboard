@@ -52,8 +52,35 @@
 					<button id="controls" type="button" class="btn text-primary fs-5 themeSwitch">
 						<i class="themeIcon bi bi-sun-fill"></i>
 					</button>
+					<!--User Profile-->
 					<span id="user" type="button" class="p-1 pe-3">
 						<img src="./images/user.jfif" class="img-responsive rounded-circle" alt="">
+						<ul id="user_settings" class="position-absolute mt-1 text-primary bg-primary2">
+							<li>
+								<span>
+									<i class="bi bi-person-circle"></i>
+								</span>
+								Profile
+							</li>
+							<li>
+								<span>
+									<i class="bi bi-gear-fill"></i>
+								</span>
+								Settings
+							</li>
+							<li>
+								<span>
+									<i class="bi bi-question-circle-fill"></i>
+								</span>
+								Help
+							</li>
+							<li>
+								<span>
+									<i class="bi bi-door-open-fill"></i>
+								</span>
+								Sign Out
+							</li>
+						</ul>
 					</span>
 				</span>
 			</div>
@@ -213,10 +240,11 @@
 
 	<!-- JavaScript Bundle with Popper -->
 	<script async src="./js/theme.js"></script>
-	<script async src="./js/charts.js"></script>
+	<script src="./js/charts.js"></script>
+	<script src="./js/data.js"></script>
 	<script src="./js/index.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-	
+
 </body>
 
 </html>

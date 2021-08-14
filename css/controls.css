@@ -1,0 +1,62 @@
+#toggle:hover, #controls:hover, #toggle2:hover {
+  transform: scale(0.95);
+}
+
+#addon-wrapping {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border: solid 0.05rem var(--primary-2);
+}
+#searchBar {
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border: solid 0.05rem var(--primary-2);
+}
+
+#controls, #toggle,#toggle2 {
+  height: 2.5rem;
+  width: 2.5rem;
+  padding:0px;
+  border-radius: 50%;
+  margin: 0.1rem;
+  border: solid 0.01rem var(--primary-2);
+  transition: transform 0.3s;
+}
+
+#logo{
+  z-index: 1;
+}
+
+ /* User Profile */
+#user img {
+  width: 2.3rem;
+}
+#user_settings{
+	padding:0.5rem;
+	border-radius: 0.5rem;
+	width:7rem;
+	display: none;
+}
+#user_settings li{
+	list-style: none;
+	transition: transform .6s, color .5s;
+}
+
+#user_settings li:hover{
+	transform: scale(0.95);
+}
+
+#user:hover #user_settings{
+	display: block;
+}
+#user_settings::after{
+  content: " ";
+  position: absolute;
+  bottom: 97%;  /* At the top of the tooltip */
+  left: 15%;
+  margin-top: 100% !important;
+  margin-left: -5px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent var(--primary-2) transparent;
+}

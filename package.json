@@ -16,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/Sands-45/Professional-Dashboard/issues"
   },
-  "homepage": "https://github.com/Sands-45/Professional-Dashboard#readme"
+  "homepage": "https://github.com/Sands-45/Professional-Dashboard#readme",
+  "dependencies": {}
 }
