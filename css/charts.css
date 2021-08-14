@@ -11,8 +11,12 @@
 	width: 48.5%;
 }
 .charts{
-	width: 48.5%;
 	background: var(--primary-1);
 	border-radius: .5rem;
 	transition:  background .5s;
+}
+@media screen and (min-width:992px) {
+	.charts{
+		width:48.5%;
+	}
 }

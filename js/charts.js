@@ -12,7 +12,6 @@ let options = {
     },
   ],
   chart: {
-    height: 350,
     type: "line",
   },
   stroke: {
@@ -20,20 +19,20 @@ let options = {
   },
   fill: {
     type: "solid",
-    opacity: [0.35, 1],
+    opacity: [0.35, .4],
   },
   labels: [
-    "Dec 01",
-    "Dec 02",
-    "Dec 03",
-    "Dec 04",
-    "Dec 05",
-    "Dec 06",
-    "Dec 07",
-    "Dec 08",
-    "Dec 09 ",
-    "Dec 10",
-    "Dec 11",
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep ",
+    "Oct",
+    "Nov",
   ],
   markers: {
     size: 0,
@@ -49,9 +48,6 @@ let options = {
         return y;
       },
     },
-  },
-  stroke: {
-    curve: "smooth",
   },
   grid: {
     yaxis: {
@@ -93,7 +89,7 @@ var options2 = {
   },
   xaxis: {
     categories: [
-      "South Korea",
+      "South Africa",
       "Canada",
       "United Kingdom",
       "Netherlands",
