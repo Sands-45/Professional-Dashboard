@@ -1,3 +1,5 @@
+
+/* ===============Chart One ===========*/
 let options = {
   series: [
     {
@@ -112,3 +114,5 @@ var options2 = {
 
 var chart2 = new ApexCharts(document.querySelector("#chart2"), options2);
 chart2.render();
+
+/* =============== Spark Line ============ */
