@@ -1,0 +1,20 @@
+{
+  "name": "Professional-Dashboard",
+  "version": "1.0.0",
+  "description": "My Personal Dashboard ..Practising vanilla js\r Live Demo https://sands-45.github.io/Professional-Dashboard/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sands-45/Professional-Dashboard.git"
+  },
+  "keywords": [],
+  "author": "Sands_45",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sands-45/Professional-Dashboard/issues"
+  },
+  "homepage": "https://github.com/Sands-45/Professional-Dashboard#readme"
+}

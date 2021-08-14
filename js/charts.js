@@ -4,9 +4,13 @@ let options = {
   },
   series: [
     {
-      name: "sales",
+      name: "Sales",
       data: [2568, 5285, 4872, 3689, 5863, 5263],
     },
+	{
+      name: "Lose",
+      data: [256, 585, 1002, 859, 863, 630],
+    }
   ],
   xaxis: {
     categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
@@ -22,7 +26,7 @@ let options = {
     },
   },
   title: {
-    text: "Work Summary",
+    text: "Annual Revenue",
     align: "center",
     style: {
       fontSize: "16px",
