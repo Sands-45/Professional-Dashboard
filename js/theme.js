@@ -8,6 +8,9 @@ function lightTheme() {
   document
     .querySelectorAll(".stats")
     .forEach((el) => (el.style.background = "#bee3db"));
+  document
+    .querySelectorAll(".charts")
+    .forEach((el) => (el.style.background = "#bee3db"));
   localStorage.setItem("theme", "enabled");
   document.querySelector(".sidebar").classList.remove("text-secondary");
   document.querySelector(".themeIcon").classList.remove("bi-sun-fill");
@@ -21,6 +24,9 @@ function darkTheme() {
   document.getElementById("sideMenu-Offcanvas").style.background = "#0a172691";
   document
     .querySelectorAll(".stats")
+    .forEach((el) => (el.style.background = "#131f2d"));
+  document
+    .querySelectorAll(".charts")
     .forEach((el) => (el.style.background = "#131f2d"));
   localStorage.setItem("theme", "disabled");
   document.querySelector(".sidebar").classList.add("text-secondary");
