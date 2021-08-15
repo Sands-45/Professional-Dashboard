@@ -21,10 +21,15 @@ function lightTheme() {
     }
   }
   let reportSubHeader = document.querySelectorAll(".reportSubheard");
-  reportSubHeader.forEach((item) =>{
+  reportSubHeader.forEach((item) => {
     item.classList.remove("text-light");
     item.classList.add("text-dblue");
-  })
+  });
+  let socials = document.querySelectorAll(".socials");
+  socials.forEach((item) => {
+    item.style.background = "#9eb8da";
+  });
+  document.getElementById("greetUser").style.background = "#9eb8da";
   localStorage.setItem("theme", "enabled");
   document.querySelector(".sidebar").classList.remove("text-secondary");
   document.querySelector(".sidebar").classList.add("text-dblue");
@@ -55,6 +60,11 @@ function darkTheme() {
     item.classList.remove("text-dblue");
     item.classList.add("text-light");
   });
+  let socials = document.querySelectorAll(".socials");
+  socials.forEach((item) => {
+    item.style.background = "var(--primary-2)";
+  });
+  document.getElementById("greetUser").style.background = "var(--primary-2)";
   localStorage.setItem("theme", "disabled");
   document.querySelector(".sidebar").classList.remove("text-dblue");
   document.querySelector(".sidebar").classList.add("text-secondary");
