@@ -1,6 +1,7 @@
 //Dash One ===================
+
 /* =============== miniStat RadialBar ============ */
-var options1 = {
+let options1 = {
   series: [76, 67, 61],
   chart: {
     type: "radialBar",
@@ -69,7 +70,7 @@ var options1 = {
     },
   },
 };
-var chart1 = new ApexCharts(document.querySelector("#chart1"), options1);
+const chart1 = new ApexCharts(document.querySelector("#chart1"), options1);
 chart1.render();
 
 /* =============== Polar chart Monochrome ============ */
@@ -120,7 +121,7 @@ let options2 = {
     },
   },
 };
-let chart2 = new ApexCharts(document.querySelector("#chart2"), options2);
+const chart2 = new ApexCharts(document.querySelector("#chart2"), options2);
 chart2.render();
 
 /* ===============Chart One ===========*/
@@ -198,11 +199,11 @@ let options3 = {
     },
   },
 };
-let chart3 = new ApexCharts(document.querySelector("#chart3"), options3);
+const chart3 = new ApexCharts(document.querySelector("#chart3"), options3);
 chart3.render();
 
 /* =======================Chart 2 ==================*/
-var options4 = {
+let options4 = {
   series: [
     {
       data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380],
@@ -258,6 +259,6 @@ var options4 = {
     },
   },
 };
-
-var chart4 = new ApexCharts(document.querySelector("#chart4"), options4);
+const chart4 = new ApexCharts(document.querySelector("#chart4"), options4);
 chart4.render();
+
