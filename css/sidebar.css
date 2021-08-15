@@ -60,7 +60,7 @@ ul .active{
 
 #mainContent,
 #sideNav {
-  transition: width 0.3s, opacity 0.2s;
+  transition: width 0.3s, opacity 0.2s, background .8s;
 }
 
 #mainContent{

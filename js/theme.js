@@ -19,7 +19,7 @@ function lightTheme() {
     if (x.matches) {
       document.getElementById("sideNav").style.background = "#bee3db9f";
     } else {
-      document.getElementById("sideNav").style.background = "#e0fbfc";
+      document.getElementById("sideNav").style.background = "";
     }
   }
 
@@ -47,7 +47,7 @@ function darkTheme() {
     if (x.matches) {
       document.getElementById("sideNav").style.background = "#0a172691";
     } else {
-      document.getElementById("sideNav").style.background = "#0a1726";
+      document.getElementById("sideNav").style.background = "";
     }
   }
   localStorage.setItem("theme", "disabled");
