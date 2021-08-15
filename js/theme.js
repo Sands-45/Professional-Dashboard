@@ -15,7 +15,7 @@ function lightTheme() {
   x.addListener(sideBarTheme); // Attach listener function on state changes
   function sideBarTheme(x) {
     if (x.matches) {
-      document.getElementById("sideNav").style.background = "#bee3db9f";
+      document.getElementById("sideNav").style.background = "#bee3db";
     } else {
       document.getElementById("sideNav").style.background = "#bee3db";
     }
@@ -48,7 +48,7 @@ function darkTheme() {
   x.addListener(sideBarTheme); // Attach listener function on state changes
   function sideBarTheme(x) {
     if (x.matches) {
-      document.getElementById("sideNav").style.background = "#0a172691";
+      document.getElementById("sideNav").style.background = "#121f2c";
     } else {
       document.getElementById("sideNav").style.background = "#131f2d";
     }
