@@ -32,3 +32,54 @@
     width: 48.5%;
   }
 }
+
+#salesDonut{
+  height: 6rem;
+  width:6rem;
+  position: relative;
+  background: transparent;
+  float: right;
+  border-left: 0.5rem solid var(--hover);
+  border-top: 0.5rem solid var(--hover);
+  border-right: 0.5rem solid var(--info);
+  border-bottom: 0.5rem solid var(--danger);
+  border-radius: 50%;
+  animation:donut 5s ease-in-out infinite;
+}
+
+@keyframes donut{
+  0%,100%{
+    transform: rotate(0deg);
+  }
+  25%{
+    transform: rotate(45deg);
+  }
+  50%{
+    transform: rotate(45deg);
+  }
+  80%{
+    transform: rotate(360deg);
+  }
+  90%{
+    transform: rotate(360deg);
+  }
+}
+
+#brandSales li{
+  font-size: small;
+}
+
+.compareUp{
+  color:var(--up);
+  height: 1rem;
+  width:3rem;
+  background: #0cf03227;
+  border-radius:0.5rem;
+}
+.compareDown{
+  color:var(--down);
+  height: 1rem;
+  width:3rem;
+  background: #fc080828;
+  border-radius:0.5rem;
+}

@@ -7,9 +7,12 @@
   --lightTheme:#bee3db;
   --primary-1: #131f2d;
   --primary-2: #344050;
-  --hover: #2d73ce;
-  --secondary: #6c757d
-;
+  --hover: #0c6ffd;
+  --secondary: #6c747c;
+  --danger:#dc3545;
+  --info:#0ccbf0;
+  --up:#08fc31;
+  --down:#fc0808;
 }
 .bg-dblue{
   background: var(--dark-blue);
@@ -43,6 +46,13 @@ body {
 body{
   background:var(--dark-blue);
   transition: background .5s;
+}
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
 }
 /* ================Top Menu ===========*/
 
