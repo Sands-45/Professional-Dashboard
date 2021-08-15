@@ -20,6 +20,10 @@ ul .active{
 .sidebar {
   padding-left: 0px;
 }
+#sideNav{
+  background: #131f2d;
+  border-radius: 0.5rem;
+}
 
 /* ====DropDown Menu ======*/
 .dropMenu {

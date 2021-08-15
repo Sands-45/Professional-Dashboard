@@ -7,11 +7,9 @@ function lightTheme() {
   document
     .querySelectorAll(".stats")
     .forEach((el) => (el.style.background = "#bee3db"));
-
   document
     .querySelectorAll(".charts")
     .forEach((el) => (el.style.background = "#bee3db"));
-
   let x = window.matchMedia("(max-width: 1200px)");
   sideBarTheme(x); // Call listener function at run time
   x.addListener(sideBarTheme); // Attach listener function on state changes
@@ -19,27 +17,29 @@ function lightTheme() {
     if (x.matches) {
       document.getElementById("sideNav").style.background = "#bee3db9f";
     } else {
-      document.getElementById("sideNav").style.background = "";
+      document.getElementById("sideNav").style.background = "#bee3db";
     }
   }
-
+  let reportSubHeader = document.querySelectorAll(".reportSubheard");
+  reportSubHeader.forEach((item) =>{
+    item.classList.remove("text-light");
+    item.classList.add("text-dblue");
+  })
   localStorage.setItem("theme", "enabled");
   document.querySelector(".sidebar").classList.remove("text-secondary");
+  document.querySelector(".sidebar").classList.add("text-dblue");
   document.querySelector(".themeIcon").classList.remove("bi-sun-fill");
   document.querySelector(".themeIcon").classList.add("bi-moon-stars-fill");
 }
 
 function darkTheme() {
   document.body.style.background = "#0a1726";
-
   document
     .querySelectorAll(".stats")
     .forEach((el) => (el.style.background = "#131f2d"));
-
   document
     .querySelectorAll(".charts")
     .forEach((el) => (el.style.background = "#131f2d"));
-    
   let x = window.matchMedia("(max-width: 1200px)");
   sideBarTheme(x); // Call listener function at run time
   x.addListener(sideBarTheme); // Attach listener function on state changes
@@ -47,15 +47,21 @@ function darkTheme() {
     if (x.matches) {
       document.getElementById("sideNav").style.background = "#0a172691";
     } else {
-      document.getElementById("sideNav").style.background = "";
+      document.getElementById("sideNav").style.background = "#131f2d";
     }
   }
+  let reportSubHeader = document.querySelectorAll(".reportSubheard");
+  reportSubHeader.forEach((item) => {
+    item.classList.remove("text-dblue");
+    item.classList.add("text-light");
+  });
   localStorage.setItem("theme", "disabled");
+  document.querySelector(".sidebar").classList.remove("text-dblue");
   document.querySelector(".sidebar").classList.add("text-secondary");
   document.querySelector(".themeIcon").classList.remove("bi-moon-stars-fill");
   document.querySelector(".themeIcon").classList.add("bi-sun-fill");
 }
- /* ===============Save Theme to Local Storage ===========*/
+/* ===============Save Theme to Local Storage ===========*/
 themeSwitcher.addEventListener("click", () => {
   let current = "";
   let current2 = "rgb(10, 23, 38)";

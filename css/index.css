@@ -26,6 +26,9 @@
 .seconary{
   background: var(--secondary);
 }
+.text-dblue{
+  color: var(--dark-blue);
+}
 .controllight{
   background: #bde0fe;
 }
