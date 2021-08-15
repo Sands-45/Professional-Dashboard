@@ -21,6 +21,9 @@
   border-radius: 0.5rem;
   transition: background 0.5s;
 }
+.miniStats{
+	width: 23.5%;
+}
 .charts {
   background: var(--primary-1);
   border-radius: 0.5rem;

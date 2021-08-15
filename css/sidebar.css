@@ -32,7 +32,7 @@ ul .active{
   transform: scale(1);
   height: 100px;
   opacity: 1;
-  transition: height 100% 0.5s;
+  transition: height  0.5s;
 }
 
 #dropMenu li,
@@ -60,7 +60,7 @@ ul .active{
 
 #mainContent,
 #sideNav {
-  transition: width 0.3s, opacity 0.2s, background .8s;
+  transition: width 0.5s, opacity 0.3s, background .8s;
 }
 
 #mainContent{
