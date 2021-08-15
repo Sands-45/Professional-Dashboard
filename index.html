@@ -154,53 +154,65 @@
 			<!--================= Body Contents ==============-->
 			<div id="mainContent" class="col vh-100 rounded-3">
 				<div id="dash1" class="row tabContent active justify-content-around mt-2 p-2 text-center text-danger">
-					<div class="col-6 mb-3 stats"></div>
-					<div class="col-6 mb-3 stats"></div>
-					<div id="chart0" class="col-6 mb-3 stats">
-						<div class="progress mt-3 bg-secondary">
-							<div class="progress-bar" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0"
+					<div class="col-6 mb-3 stats">
+						<div class="row">
+							<div class="col-6">
+								<h6 class="text-light mt-4 text-bold">Total Sales</h6>
+								<h1 class="mt3 text-secondary">$85M</h1>
+								<div class="compareUp center p-2">
+									<small>3.8%</small>
+								</div>
+							</div>
+							<div class="col-6">
+								<h6 class="text-light mt-4 text-bold">Upsell Amount</h6>
+								<h1 class="mt3 text-secondary">$1.5M</h1>
+								<div class="compareDown center p-2">
+									<small>1.2%</small>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 mb-3 stats">
+						<h6 class="text-light mt-4 text-bold">Upsell Percentage/Brand (%)</h6>
+						<div class="progress mt-4 bg-dblue">
+							<div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0"
 								aria-valuemax="100"></div>
-							<div class="progress-bar bg-success" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0"
+							<div class="progress-bar bg-success" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0"
 								aria-valuemax="100"></div>
 							<div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0"
 								aria-valuemax="100"></div>
 						</div>
+						<div class="mt-4">
+							<span class="text-primary pe-4">◉ Deb</span>
+							<span class="text-success pe-4">◉ Fishaways</span> 
+							<span class="text-info pe-4">◉ Steers</span>
+						</div>
+					</div>
+					<div id="brandSales" class="col-6 mb-3 stats">
 						<div class="row">
-							<div class="col-6">
-								<ul class="mt-4 text-start">
+							<div class="col-6 ">
+								<h6 class="text-light mt-4 text-bold">Brand Sales</h6>
+								<ul class="mt-1 text-start">
 									<li class="text-primary">Debonairs Pizza
-										<span class="float-end">10%</span>
+										<span class="float-end">50%</span>
 									</li>
-									<li class="text-success">Steers
+									<li class="text-danger">Steers
 										<span class="float-end">32%</span>
 									</li>
 									<li class="text-info">Fishaways
 										<span class="float-end">18%</span>
 									</li>
 									<li class="text-secondary">Wimpy
-										<span class="float-end">40%</span>
+										<span class="float-end">0%</span>
 									</li>
 								</ul>
 							</div>
-							<div class="col-6">
-								<ul class="mt-4 text-start">
-									<li class="text-primary">Debonairs Pizza
-										<span class="float-end">10%</span>
-									</li>
-									<li class="text-success">Steers
-										<span class="float-end">32%</span>
-									</li>
-									<li class="text-info">Fishaways
-										<span class="float-end">18%</span>
-									</li>
-									<li class="text-secondary">Wimpy
-										<span class="float-end">40%</span>
-									</li>
-								</ul>
+							<div class="col-6 mt-2 center">
+								<div class="center text-primary" id="salesDonut"></div>
 							</div>
 						</div>
 					</div>
-					<div id="chart2" class="col-6 p-0 stats"></div>
+					<div class="col-6 p-0 stats"></div>
 					<div id="chart3" class="col-12 col-lg-6 pt-2 charts"></div>
 					<div id="chart4" class="col-12 col-lg-6 mt-3 mt-lg-0 pt-2 charts"></div>
 				</div>
