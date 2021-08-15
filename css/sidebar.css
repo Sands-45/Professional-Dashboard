@@ -91,7 +91,7 @@ ul .active{
   left: 0;
   background: #0a172691;
   height: 100vh;
-  width: 15rem !important;
+  width: 14rem !important;
   z-index: 11;
   border-radius: 0.5rem;
   transition: width 0.5s, opacity 0.4s, background 0.4s;
@@ -101,7 +101,7 @@ ul .active{
 /*========Socials====================*/
 #socials{
   width: 70%;
-  margin-bottom: 50%;
+  margin-bottom: 31%;
 }
 .socials a{
   text-decoration: none;

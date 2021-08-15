@@ -85,14 +85,14 @@
 		<div id="tabsContainer" class="row">
 			<div id="sideNav" class="col-2">
 				<!--================= Sidebar ==============-->
-				<div id="greetUser" class="center">
+				<div id="greetUser" class="center mb-5">
 					<h5 class="text-primary mt-5 mb-5 font-monospace text-center">Hi SANDS! <span class="greeting-hand"> 👋</span></h5>
 				</div>
 				<ul class="sidebar  mt-1 text-secondary">
 					<!--================= DropDown ==============-->
 					<li id="dash-dropDown" class="nav-item mb-3">
 						<span>
-							<i class="bi bi-kanban-fill"></i>
+							<i class="bi bi-kanban-fill pe-2"></i>
 						</span>
 						Dashboards
 						<i id="dropIcon" class="bi bi-chevron-down float-end"></i>
@@ -116,38 +116,33 @@
 					<!--=====================End of Divider ===========-->
 					<li class="nav-item sideNav" onclick="openTab(event, 'dash4')">
 						<span>
-							<i class="bi bi-calendar-week-fill"></i>
+							<i class="bi bi-calendar-week-fill pe-2"></i>
 						</span>
 						Calendar
-						<i class="bi bi-caret-right float-end"></i>
 					</li>
 					<li class="nav-item sideNav" onclick="openTab(event, 'dash5')">
 						<span>
-							<i class="bi bi-chat-left-fill"></i>
+							<i class="bi bi-chat-square-fill pe-2"></i>
 						</span>
 						Chart
-						<i class="bi bi-caret-right float-end"></i>
 					</li>
 					<li class="nav-item sideNav" onclick="openTab(event, 'dash6')">
 						<span>
-							<i class="bi bi-calendar3-event-fill"></i>
+							<i class="bi bi-calendar3-event-fill pe-2"></i>
 						</span>
 						Events
-						<i class="bi bi-caret-right float-end"></i>
 					</li>
 					<li class="nav-item sideNav" onclick="openTab(event, 'dash7')">
 						<span>
-							<i class="bi bi-door-closed-fill"></i>
+							<i class="bi bi-door-closed-fill pe-2"></i>
 						</span>
 						Activity log
-						<i class="bi bi-caret-right float-end"></i>
 					</li>
 					<li class="nav-item sideNav" onclick="openTab(event, 'dash8')">
 						<span>
-							<i class="bi bi-envelope-fill"></i>
+							<i class="bi bi-envelope-fill pe-2"></i>
 						</span>
 						Emails
-						<i class="bi bi-caret-right float-end"></i>
 					</li>
 				</ul>
 				<div id="socials" class="row mt-5 center">
@@ -198,24 +193,24 @@
 					</div>
 					<div id="brandSales" class="col-6 mb-3 stats">
 						<div class="row">
-							<div class="col-6 ">
-								<h6 class="text-light reportSubheard mt-4 text-bold">Brand Sales</h6>
+							<h6 class="text-light reportSubheard mt-3 text-bold">Brand Sales</h6>
+							<div class="col d-none d-md-flex mt-2">
 								<ul class="mt-1 text-start">
 									<li class="text-primary">Debonairs Pizza
-										<span class="float-end">50%</span>
+										<span class="float-end  d-none">50%</span>
 									</li>
 									<li class="text-danger">Steers
-										<span class="float-end">32%</span>
+										<span class="float-end d-none ">32%</span>
 									</li>
 									<li class="text-info">Fishaways
-										<span class="float-end">18%</span>
+										<span class="float-end d-none">18%</span>
 									</li>
 									<li class="text-secondary">Wimpy
-										<span class="float-end">0%</span>
+										<span class="float-end d-none">0%</span>
 									</li>
 								</ul>
 							</div>
-							<div class="col-6 mt-2 center">
+							<div class="col-12 col-sm-6  center">
 								<div class="center text-primary" id="salesDonut"></div>
 							</div>
 						</div>

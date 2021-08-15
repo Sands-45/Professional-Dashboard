@@ -31,8 +31,6 @@ function lightTheme() {
   });
   document.getElementById("greetUser").style.background = "#9eb8da";
   localStorage.setItem("theme", "enabled");
-  document.querySelector(".sidebar").classList.remove("text-secondary");
-  document.querySelector(".sidebar").classList.add("text-dblue");
   document.querySelector(".themeIcon").classList.remove("bi-sun-fill");
   document.querySelector(".themeIcon").classList.add("bi-moon-stars-fill");
 }
@@ -66,8 +64,6 @@ function darkTheme() {
   });
   document.getElementById("greetUser").style.background = "var(--primary-2)";
   localStorage.setItem("theme", "disabled");
-  document.querySelector(".sidebar").classList.remove("text-dblue");
-  document.querySelector(".sidebar").classList.add("text-secondary");
   document.querySelector(".themeIcon").classList.remove("bi-moon-stars-fill");
   document.querySelector(".themeIcon").classList.add("bi-sun-fill");
 }

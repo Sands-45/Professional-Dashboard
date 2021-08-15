@@ -64,16 +64,6 @@ let options3 = {
       show: false,
     },
   },
-  title: {
-    text: "Sales By Year",
-    align: "center",
-    style: {
-      fontSize: "14px",
-      fontWeight: "bold",
-      fontFamily: "sans-serif",
-      color: "#bee3db",
-    },
-  },
 };
 const chart3 = new ApexCharts(document.querySelector("#chart3"), options3);
 chart3.render();
@@ -121,16 +111,6 @@ let options4 = {
       lines: {
         show: false,
       },
-    },
-  },
-  title: {
-    text: "Total Sales Per Country",
-    align: "center",
-    style: {
-      fontSize: "14px",
-      fontWeight: "bold",
-      fontFamily: "sans-serif",
-      color: "#bee3db",
     },
   },
 };
