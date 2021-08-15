@@ -4,38 +4,58 @@ let theme = localStorage.getItem("theme");
 
 function lightTheme() {
   document.body.style.background = "#e0fbfc";
-  document.getElementById("sideMenu-Offcanvas").style.background = "#e0fbfc8f";
   document
     .querySelectorAll(".stats")
     .forEach((el) => (el.style.background = "#bee3db"));
+
   document
     .querySelectorAll(".charts")
     .forEach((el) => (el.style.background = "#bee3db"));
+
+  let x = window.matchMedia("(max-width: 1200px)");
+  sideBarTheme(x); // Call listener function at run time
+  x.addListener(sideBarTheme); // Attach listener function on state changes
+  function sideBarTheme(x) {
+    if (x.matches) {
+      document.getElementById("sideNav").style.background = "#bee3db9f";
+    } else {
+      document.getElementById("sideNav").style.background = "#e0fbfc";
+    }
+  }
+
   localStorage.setItem("theme", "enabled");
   document.querySelector(".sidebar").classList.remove("text-secondary");
   document.querySelector(".themeIcon").classList.remove("bi-sun-fill");
   document.querySelector(".themeIcon").classList.add("bi-moon-stars-fill");
-  document.querySelector("#offcanvasTop").classList.remove("bg-dblue");
-  document.querySelector("#offcanvasTop").classList.add("bg-lightTheme");
 }
 
 function darkTheme() {
   document.body.style.background = "#0a1726";
-  document.getElementById("sideMenu-Offcanvas").style.background = "#0a172691";
+
   document
     .querySelectorAll(".stats")
     .forEach((el) => (el.style.background = "#131f2d"));
+
   document
     .querySelectorAll(".charts")
     .forEach((el) => (el.style.background = "#131f2d"));
+    
+  let x = window.matchMedia("(max-width: 1200px)");
+  sideBarTheme(x); // Call listener function at run time
+  x.addListener(sideBarTheme); // Attach listener function on state changes
+  function sideBarTheme(x) {
+    if (x.matches) {
+      document.getElementById("sideNav").style.background = "#0a172691";
+    } else {
+      document.getElementById("sideNav").style.background = "#0a1726";
+    }
+  }
   localStorage.setItem("theme", "disabled");
   document.querySelector(".sidebar").classList.add("text-secondary");
   document.querySelector(".themeIcon").classList.remove("bi-moon-stars-fill");
   document.querySelector(".themeIcon").classList.add("bi-sun-fill");
-  document.querySelector("#offcanvasTop").classList.remove("bg-lightTheme");
-  document.querySelector("#offcanvasTop").classList.add("bg-dblue");
 }
-
+ /* ===============Save Theme to Local Storage ===========*/
 themeSwitcher.addEventListener("click", () => {
   let current = "";
   let current2 = "rgb(10, 23, 38)";

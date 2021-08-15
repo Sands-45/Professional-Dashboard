@@ -8,6 +8,8 @@
   --primary-1: #131f2d;
   --primary-2: #344050;
   --hover: #2d73ce;
+  --secondary: #6c757d
+;
 }
 .bg-dblue{
   background: var(--dark-blue);
@@ -17,6 +19,9 @@
 }
 .bg-primary2{
   background: var(--primary-2);
+}
+.seconary{
+  background: var(--secondary);
 }
 .controllight{
   background: #bde0fe;

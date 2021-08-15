@@ -18,16 +18,11 @@
 	<div id="menubar" class="container mt-3">
 		<div class="row position-relative">
 			<!-- SideMenu Togglers -->
-			<div class="col-2 d-none d-xl-block d-xxl-block">
+			<div class="col-2">
 				<button id="toggle" type="button" class="btn text-primary fs-5">
-					<i class="bi bi-grid-fill navMiniLg"></i>
+					<i class="bi bi-grid-fill toggleIcon"></i>
 				</button>
 				<span id="collapse"></span>
-			</div>
-			<div class="col-2 d-xl-none d-xxl-none">
-				<button id="toggle2" class="btn text-primary fs-5" type="button">
-					<i class="bi bi-grid-fill"></i>
-				</button>
 			</div>
 			<!-- End SideMenu Togglers -->
 			<div class="col d-none d-sm-block">
@@ -87,12 +82,12 @@
 		</div>
 	</div>
 	<div class="container mt-2">
-		<div class="row">
-			<div id="sideNav" class="col-auto col-xxl-2 col-xl-2 d-none d-xl-block">
+		<div id="tabsContainer" class="row">
+			<div id="sideNav" class="col-2">
 				<!--================= Sidebar ==============-->
 				<h5 class="text-primary mt-5 mb-5 font-monospace text-center">Hi SANDS! <i
 						class="bi bi-emoji-smile-fill"></i></h5>
-				<ul class="sidebar  mt-1 text-secondary d-flex d-xl-block d-xxl-block">
+				<ul class="sidebar  mt-1 text-secondary">
 					<!--================= DropDown ==============-->
 					<li id="dash-dropDown" class="nav-item mb-3">
 						<span>
@@ -102,9 +97,9 @@
 						<i id="dropIcon" class="bi bi-chevron-down float-end"></i>
 					</li>
 					<ul id="dropMenu" class="dropMenu">
-						<li class="menu-list sideNav">Dash 1</li>
-						<li class="menu-list sideNav">Dash 2</li>
-						<li class="menu-list sideNav">Dash 3</li>
+						<li class="menu-list sideNav active" onclick="openTab(event, 'dash1')">Dash </li>
+						<li class="menu-list sideNav" onclick="openTab(event, 'dash2')">Dash 2</li>
+						<li class="menu-list sideNav" onclick="openTab(event, 'dash3')">Dash 3</li>
 					</ul>
 					<!--=================End of  DropDown ==============-->
 					<div class="row">
@@ -118,102 +113,35 @@
 						</div>
 					</div>
 					<!--=====================End of Divider ===========-->
-					<li class="nav-item sideNav">
+					<li class="nav-item sideNav" onclick="openTab(event, 'dash4')">
 						<span>
 							<i class="bi bi-calendar-week-fill"></i>
 						</span>
 						Calendar
 						<i class="bi bi-caret-right float-end"></i>
 					</li>
-					<li class="nav-item sideNav">
+					<li class="nav-item sideNav" onclick="openTab(event, 'dash5')">
 						<span>
 							<i class="bi bi-chat-left-fill"></i>
 						</span>
 						Chart
 						<i class="bi bi-caret-right float-end"></i>
 					</li>
-					<li class="nav-item sideNav">
+					<li class="nav-item sideNav" onclick="openTab(event, 'dash6')">
 						<span>
 							<i class="bi bi-calendar3-event-fill"></i>
 						</span>
 						Events
 						<i class="bi bi-caret-right float-end"></i>
 					</li>
-					<li class="nav-item sideNav">
+					<li class="nav-item sideNav" onclick="openTab(event, 'dash7')">
 						<span>
 							<i class="bi bi-door-closed-fill"></i>
 						</span>
 						Activity log
 						<i class="bi bi-caret-right float-end"></i>
 					</li>
-					<li class="nav-item sideNav">
-						<span>
-							<i class="bi bi-envelope-fill"></i>
-						</span>
-						Emails
-						<i class="bi bi-caret-right float-end"></i>
-					</li>
-				</ul>
-			</div>
-			<!--================= Sidebar On Large & Smaller Screens ==============-->
-			<div id="sideMenu-Offcanvas" class="p-2 displayMenu">
-				<h5 class="text-primary mt-5 font-monospace text-center">Hi SANDS! <i
-						class="bi bi-emoji-smile-fill"></i></h5>
-				<ul class="sidebar mt-5 text-secondary d-xl-block d-xxl-block">
-					<!--================= DropDown ==============-->
-					<li id="dash-dropDown2" class="nav-item mb-3">
-						<span>
-							<i class="bi bi-kanban-fill"></i>
-						</span>
-						Dashboards
-						<i id="dropIcon2" class="bi bi-chevron-down float-end"></i>
-					</li>
-					<ul id="dropMenu2" class="dropMenu">
-						<li class="menu-list sideNav">Dash 1</li>
-						<li class="menu-list sideNav">Dash 2</li>
-						<li class="menu-list sideNav">Dash 3</li>
-					</ul>
-					<!--=================End of  DropDown ==============-->
-					<div class="row">
-						<div class="col-4 text-primary">
-							<p>Others</p>
-						</div>
-						<div class="col-8">
-							<span class="divider">
-								<hr>
-							</span>
-						</div>
-					</div>
-					<!--=====================End of Divider ===========-->
-					<li class="nav-item sideNav">
-						<span>
-							<i class="bi bi-calendar-week-fill"></i>
-						</span>
-						Calendar
-						<i class="bi bi-caret-right float-end"></i>
-					</li>
-					<li class="nav-item sideNav">
-						<span>
-							<i class="bi bi-chat-left-fill"></i>
-						</span>
-						Chart
-						<i class="bi bi-caret-right float-end"></i>
-					</li>
-					<li class="nav-item sideNav">
-						<span>
-							<i class="bi bi-calendar3-event-fill"></i>
-						</span>
-						Events
-						<i class="bi bi-caret-right float-end"></i>
-					</li>
-					<li class="nav-item sideNav">
-						<span>
-							<i class="bi bi-door-closed-fill"></i>
-						</span>
-						Activity log
-						<i class="bi bi-caret-right float-end"></i>
-					</li>
-					<li class="nav-item sideNav">
+					<li class="nav-item sideNav" onclick="openTab(event, 'dash8')">
 						<span>
 							<i class="bi bi-envelope-fill"></i>
 						</span>
@@ -225,11 +153,67 @@
 
 			<!--================= Body Contents ==============-->
 			<div id="mainContent" class="col vh-100 rounded-3">
-				<div class="row statsContainer justify-content-around mt-2 p-2 text-center text-danger">
+				<div id="dash1" class="row tabContent active justify-content-around mt-2 p-2 text-center text-danger">
 					<div class="col-6 mb-3 stats"></div>
 					<div class="col-6 mb-3 stats"></div>
 					<div class="col-6 mb-3 stats"></div>
 					<div class="col-6 mb-3 stats"></div>
+					<div id="chart" class="col-12 col-lg-6 pt-2 charts"></div>
+					<div id="chart2" class="col-12 col-lg-6 mt-3 mt-lg-0 pt-2 charts"></div>
+				</div>
+				<div id="dash2" class="row tabContent justify-content-around mt-2 p-2 text-center text-danger">
+					<div class="col-6 mb-3 stats"></div>
+					<div class="col-6 mb-3 stats"></div>
+					<div class="col-6 mb-3 stats"></div>
+					<div class="col-6 mb-3 stats">46464</div>
+					<div id="chart" class="col-12 col-lg-6 pt-2 charts"></div>
+					<div id="chart2" class="col-12 col-lg-6 mt-3 mt-lg-0 pt-2 charts"></div>
+				</div>
+				<div id="dash3" class="row tabContent justify-content-around mt-2 p-2 text-center text-danger">
+					<div class="col-6 mb-3 stats"></div>
+					<div class="col-6 mb-3 stats"></div>
+					<div class="col-6 mb-3 stats"></div>
+					<div class="col-6 mb-3 stats">54464</div>
+					<div id="chart" class="col-12 col-lg-6 pt-2 charts"></div>
+					<div id="chart2" class="col-12 col-lg-6 mt-3 mt-lg-0 pt-2 charts"></div>
+				</div>
+				<div id="dash4" class="row tabContent justify-content-around mt-2 p-2 text-center text-danger">
+					<div class="col-6 mb-3 stats"></div>
+					<div class="col-6 mb-3 stats"></div>
+					<div class="col-6 mb-3 stats"></div>
+					<div class="col-6 mb-3 stats">54464</div>
+					<div id="chart" class="col-12 col-lg-6 pt-2 charts"></div>
+					<div id="chart2" class="col-12 col-lg-6 mt-3 mt-lg-0 pt-2 charts"></div>
+				</div>
+				<div id="dash5" class="row tabContent justify-content-around mt-2 p-2 text-center text-danger">
+					<div class="col-6 mb-3 stats"></div>
+					<div class="col-6 mb-3 stats"></div>
+					<div class="col-6 mb-3 stats"></div>
+					<div class="col-6 mb-3 stats">54464</div>
+					<div id="chart" class="col-12 col-lg-6 pt-2 charts"></div>
+					<div id="chart2" class="col-12 col-lg-6 mt-3 mt-lg-0 pt-2 charts"></div>
+				</div>
+				<div id="dash6" class="row tabContent justify-content-around mt-2 p-2 text-center text-danger">
+					<div class="col-6 mb-3 stats"></div>
+					<div class="col-6 mb-3 stats"></div>
+					<div class="col-6 mb-3 stats"></div>
+					<div class="col-6 mb-3 stats">54464</div>
+					<div id="chart" class="col-12 col-lg-6 pt-2 charts"></div>
+					<div id="chart2" class="col-12 col-lg-6 mt-3 mt-lg-0 pt-2 charts"></div>
+				</div>
+				<div id="dash7" class="row tabContent justify-content-around mt-2 p-2 text-center text-danger">
+					<div class="col-6 mb-3 stats"></div>
+					<div class="col-6 mb-3 stats"></div>
+					<div class="col-6 mb-3 stats"></div>
+					<div class="col-6 mb-3 stats">54464</div>
+					<div id="chart" class="col-12 col-lg-6 pt-2 charts"></div>
+					<div id="chart2" class="col-12 col-lg-6 mt-3 mt-lg-0 pt-2 charts"></div>
+				</div>
+				<div id="dash8" class="row tabContent justify-content-around mt-2 p-2 text-center text-danger">
+					<div class="col-6 mb-3 stats"></div>
+					<div class="col-6 mb-3 stats"></div>
+					<div class="col-6 mb-3 stats"></div>
+					<div class="col-6 mb-3 stats">54464</div>
 					<div id="chart" class="col-12 col-lg-6 pt-2 charts"></div>
 					<div id="chart2" class="col-12 col-lg-6 mt-3 mt-lg-0 pt-2 charts"></div>
 				</div>

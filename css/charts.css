@@ -1,22 +1,33 @@
-#mainContent{
-	z-index: -1;
+#mainContent {
+  z-index: -1;
 }
-.stats{
-	height: 10rem;
-	background: var(--primary-1);
-	border-radius: .5rem;
-	transition:  background .5s;
+
+.tabContent {
+  display: none;
 }
-.statsContainer .col-6{
-	width: 48.5%;
+
+#mainContent .active {
+  display: flex;
 }
-.charts{
-	background: var(--primary-1);
-	border-radius: .5rem;
-	transition:  background .5s;
+
+.tabContent .col-6 {
+  width: 48.5%;
 }
-@media screen and (min-width:992px) {
-	.charts{
-		width:48.5%;
-	}
+
+/* ===============Charts & Stats =============*/
+.stats {
+  height: 10rem;
+  background: var(--primary-1);
+  border-radius: 0.5rem;
+  transition: background 0.5s;
+}
+.charts {
+  background: var(--primary-1);
+  border-radius: 0.5rem;
+  transition: background 0.5s;
+}
+@media screen and (min-width: 992px) {
+  .charts {
+    width: 48.5%;
+  }
 }
