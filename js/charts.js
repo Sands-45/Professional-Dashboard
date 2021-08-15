@@ -77,6 +77,7 @@ chart1.render();
 let options2 = {
   series: [42, 47, 52],
   chart: {
+    height: "10rem",
     type: "polarArea",
   },
   labels: ["Steers", "Deb", "Fishawyas"],
@@ -206,7 +207,7 @@ chart3.render();
 let options4 = {
   series: [
     {
-      data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380],
+      data: [400, 430, 448, 470, 540, 580, 690, 1200, 1380],
     },
   ],
   chart: {
@@ -229,16 +230,15 @@ let options4 = {
   },
   xaxis: {
     categories: [
-      "South Africa",
-      "Canada",
-      "United Kingdom",
-      "Netherlands",
-      "Italy",
-      "France",
-      "Japan",
-      "United States",
-      "China",
-      "Germany",
+      "Free State",
+      "Limpopo",
+      "Northen Cpae",
+      "North West",
+      "Mpumalanga",
+      "Eastern Cape",
+      "Kwazulu-Natal",
+      "Western Cape",
+      "Gauteng",
     ],
   },
   grid: {
