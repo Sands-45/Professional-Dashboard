@@ -1,6 +1,130 @@
 //Dash One ===================
+/* =============== miniStat RadialBar ============ */
+var options1 = {
+  series: [76, 67, 61],
+  chart: {
+    type: "radialBar",
+  },
+  plotOptions: {
+    radialBar: {
+      offsetY: 0,
+      startAngle: 0,
+      endAngle: 270,
+      hollow: {
+        margin: 5,
+        size: "30%",
+        background: "transparent",
+        image: undefined,
+      },
+      dataLabels: {
+        name: {
+          show: false,
+        },
+        value: {
+          show: false,
+        },
+      },
+    },
+  },
+  colors: ["#0084ff", "#39539E", "#0077B5"],
+  labels: ["Online", "CallCenter", "Counter"],
+  legend: {
+    show: true,
+    floating: true,
+    fontSize: "8px",
+    position: "left",
+    offsetY: -10,
+    offsetX: -10,
+    labels: {
+      useSeriesColors: true,
+    },
+    markers: {
+      size: 0,
+    },
+    formatter: function (seriesName, opts) {
+      return seriesName + ":  " + opts.w.globals.series[opts.seriesIndex];
+    },
+    itemMargin: {
+      vertical: 3,
+    },
+  },
+  responsive: [
+    {
+      breakpoint: 480,
+      options: {
+        legend: {
+          show: false,
+        },
+      },
+    },
+  ],
+  title: {
+    text: "Channel",
+    align: "right",
+    style: {
+      fontSize: "14px",
+      fontWeight: "bold",
+      fontFamily: "sans-serif",
+      color: "#bee3db",
+    },
+  },
+};
+var chart1 = new ApexCharts(document.querySelector("#chart1"), options1);
+chart1.render();
+
+/* =============== Polar chart Monochrome ============ */
+let options2 = {
+  series: [42, 47, 52],
+  chart: {
+    type: "polarArea",
+  },
+  labels: ["Steers", "Deb", "Fishawyas"],
+  fill: {
+    opacity: 1,
+  },
+  stroke: {
+    width: 1,
+    colors: undefined,
+  },
+  yaxis: {
+    show: false,
+  },
+  legend: {
+    position: "bottom",
+  },
+  plotOptions: {
+    polarArea: {
+      rings: {
+        strokeWidth: 0,
+      },
+      spokes: {
+        strokeWidth: 0,
+      },
+    },
+  },
+  theme: {
+    monochrome: {
+      enabled: true,
+      shadeTo: "light",
+      shadeIntensity: 0.6,
+    },
+  },
+  title: {
+    text: "Upsell By Brand",
+    align: "right",
+    style: {
+      fontSize: "14px",
+      fontWeight: "bold",
+      fontFamily: "sans-serif",
+      color: "#bee3db",
+    },
+  },
+};
+let chart2 = new ApexCharts(document.querySelector("#chart2"), options2);
+chart2.render();
+
 /* ===============Chart One ===========*/
-let options = {
+let options3 = {
   series: [
     {
       name: "Sales",
@@ -21,7 +145,7 @@ let options = {
   },
   fill: {
     type: "solid",
-    opacity: [0.35, .4],
+    opacity: [0.35, 0.4],
   },
   labels: [
     "Jan",
@@ -63,15 +187,22 @@ let options = {
       show: false,
     },
   },
+  title: {
+    text: "Sales By Year",
+    align: "right",
+    style: {
+      fontSize: "14px",
+      fontWeight: "bold",
+      fontFamily: "sans-serif",
+      color: "#bee3db",
+    },
+  },
 };
-
-let chart = new ApexCharts(document.querySelector("#chart"), options);
-
-chart.render();
+let chart3 = new ApexCharts(document.querySelector("#chart3"), options3);
+chart3.render();
 
 /* =======================Chart 2 ==================*/
-
-var options2 = {
+var options4 = {
   series: [
     {
       data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380],
@@ -79,6 +210,12 @@ var options2 = {
   ],
   chart: {
     type: "bar",
+    toolbar: {
+      show: false,
+      tools: {
+        download: false,
+      },
+    },
   },
   plotOptions: {
     bar: {
@@ -110,56 +247,16 @@ var options2 = {
       },
     },
   },
-};
-
-var chart2 = new ApexCharts(document.querySelector("#chart2"), options2);
-chart2.render();
-
-/* =============== miniStat RadialBar ============ */
-var options3 = {
-  series: [44, 55, 67, 83],
-  chart: {
-    type: "radialBar",
-  },
-  plotOptions: {
-    radialBar: {
-      dataLabels: {
-        name: {
-          fontSize: "15px",
-        },
-        value: {
-          fontSize: "11px",
-        },
-        total: {
-          show: true,
-          label: "Total",
-          formatter: function (w) {
-            // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
-            return 249;
-          },
-        },
-      },
+  title: {
+    text: "Total Sales Per Country",
+    align: "right",
+    style: {
+      fontSize: "14px",
+      fontWeight: "bold",
+      fontFamily: "sans-serif",
+      color: "#bee3db",
     },
   },
-  labels: ["Apples", "Oranges", "Bananas", "Berries"],
-};
-
-var chart3 = new ApexCharts(document.querySelector("#chart3"), options3);
-chart3.render();
-
-var options4 = {
-  series: [70],
-  chart: {
-    type: "radialBar",
-  },
-  plotOptions: {
-    radialBar: {
-      hollow: {
-        size: "70%",
-      },
-    },
-  },
-  labels: ["Cricket"],
 };
 
 var chart4 = new ApexCharts(document.querySelector("#chart4"), options4);
