@@ -1,5 +1,51 @@
 //Dash One ===================
-
+/* ============Total Orders =======*/
+var totalOrders = {
+  chart: {
+    type: "area",
+    height: 130,
+    toolbar: {
+      show: false,
+      tools: {
+        download: false,
+      },
+    },
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  series: [
+    {
+      data: [125, 365, 568, 569, 585, 253, 258, 124, 489],
+    },
+  ],
+  yaxis: {
+    labels: {
+      formatter: function (value) {
+        return;
+      },
+    },
+  },
+  xaxis: {
+    labels: {
+      formatter: function (value) {
+        return;
+      },
+    },
+  },
+  grid: {
+    yaxis: {
+      lines: {
+        show: false,
+      },
+    },
+  },
+};
+var totalOrders = new ApexCharts(
+  document.querySelector("#totalOrders"),
+  totalOrders
+);
+totalOrders.render();
 /*========== Sales Donut ===============*/
 let salesDonut = {
   series: [44, 55, 20],
@@ -142,48 +188,3 @@ let options4 = {
 };
 const chart4 = new ApexCharts(document.querySelector("#chart4"), options4);
 chart4.render();
-
-var options = {
-  chart: {
-    type: "area",
-    toolbar: {
-      show: false,
-      tools: {
-        download: false,
-      },
-    },
-  },
-  dataLabels: {
-    enabled: false,
-  },
-  series: [
-    {
-      data: [125, 365, 568, 569, 585, 253, 258, 124, 489],
-    },
-  ],
-  yaxis: {
-    labels: {
-      formatter: function (value) {
-        return;
-      },
-    },
-  },
-  xaxis: {
-    labels: {
-      formatter: function (value) {
-        return;
-      },
-    },
-  },
-  grid: {
-    yaxis: {
-      lines: {
-        show: false,
-      },
-    },
-  },
-};
-
-var chart = new ApexCharts(document.querySelector("#chart"), options);
-
-chart.render();
