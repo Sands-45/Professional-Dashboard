@@ -1,9 +1,11 @@
 //Dash One ===================
-var options = {
+
+/*========== Sales Donut ===============*/
+let salesDonut = {
   series: [44, 55, 20],
   chart: {
     type: "donut",
-    height:130,
+    height: 130,
   },
   labels: ["Deb", "Steers", "Fish"],
   fill: {
@@ -18,12 +20,12 @@ var options = {
   legend: {
     position: "bottom",
     offsetY: -5,
-    show:false,
+    show: false,
   },
 };
 
-var chart = new ApexCharts(document.querySelector("#salesDonut"), options);
-chart.render();
+const donut = new ApexCharts(document.querySelector("#salesDonut"), salesDonut);
+donut.render();
 /* ===============Chart One ===========*/
 let options3 = {
   series: [
@@ -140,3 +142,48 @@ let options4 = {
 };
 const chart4 = new ApexCharts(document.querySelector("#chart4"), options4);
 chart4.render();
+
+var options = {
+  chart: {
+    type: "area",
+    toolbar: {
+      show: false,
+      tools: {
+        download: false,
+      },
+    },
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  series: [
+    {
+      data: [125, 365, 568, 569, 585, 253, 258, 124, 489],
+    },
+  ],
+  yaxis: {
+    labels: {
+      formatter: function (value) {
+        return;
+      },
+    },
+  },
+  xaxis: {
+    labels: {
+      formatter: function (value) {
+        return;
+      },
+    },
+  },
+  grid: {
+    yaxis: {
+      lines: {
+        show: false,
+      },
+    },
+  },
+};
+
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+
+chart.render();
