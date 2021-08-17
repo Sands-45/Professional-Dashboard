@@ -3,7 +3,7 @@ var options = {
   series: [44, 55, 20],
   chart: {
     type: "donut",
-    height:150,
+    height:130,
   },
   labels: ["Deb", "Steers", "Fish"],
   fill: {
@@ -18,6 +18,7 @@ var options = {
   legend: {
     position: "bottom",
     offsetY: -5,
+    show:false,
   },
 };
 
