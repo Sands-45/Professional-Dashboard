@@ -55,7 +55,7 @@ let salesDonut = {
   },
   labels: ["Deb", "Steers", "Fish"],
   fill: {
-    colors: ["#0c6ffd", "#dc3545", "#0ccbf0"],
+    colors: ["#0c6ffd", "#6c747c", "#0ccbf0"],
   },
   stroke: {
     show: false,
