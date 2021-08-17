@@ -20,6 +20,9 @@
 .bg-lightTheme{
   background: var(--lightTheme);
 }
+.bg-primary1{
+  background: var(--primary-1);
+}
 .bg-primary2{
   background: var(--primary-2);
 }
@@ -57,6 +60,10 @@ body{
   margin: 0 auto;
   text-align: center;
 }
-/* ================Top Menu ===========*/
-
+/* ================Date Picker ===========*/
+#datePicker{
+  border-radius:0.5rem;
+  border:solid 1px var(--primary-2);
+  transition: color .4s;
+}
 /* ==================== End Of Top Menu =============*/

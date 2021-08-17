@@ -30,6 +30,7 @@ function lightTheme() {
     item.style.background = "#9eb8da";
   });
   document.getElementById("greetUser").style.background = "#9eb8da";
+  document.getElementById("datePicker").style.background = "#bee3db";
   localStorage.setItem("theme", "enabled");
   document.querySelector(".themeIcon").classList.remove("bi-sun-fill");
   document.querySelector(".themeIcon").classList.add("bi-moon-stars-fill");
@@ -63,6 +64,7 @@ function darkTheme() {
     item.style.background = "var(--primary-2)";
   });
   document.getElementById("greetUser").style.background = "var(--primary-2)";
+  document.getElementById("datePicker").style.background = "#131f2d";
   localStorage.setItem("theme", "disabled");
   document.querySelector(".themeIcon").classList.remove("bi-moon-stars-fill");
   document.querySelector(".themeIcon").classList.add("bi-sun-fill");
