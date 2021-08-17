@@ -29,9 +29,6 @@
   transition: background 0.5s;
 }
 
-.miniStats {
-  width: 48.5%;
-}
 
 .charts {
   background: var(--primary-1);
@@ -84,4 +81,16 @@
   width: 3rem;
   background: #fc080828;
   border-radius: 0.5rem;
+}
+
+#leads {
+  width: 100%;
+}
+
+#leads tr:nth-child(even) {
+  background-color: #afafaf1e;
+}
+
+#leads th {
+  padding: 0.3rem;
 }
