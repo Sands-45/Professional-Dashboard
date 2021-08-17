@@ -15,15 +15,15 @@
 }
 
 /* ===============Charts & Stats =============*/
-.progress{
-  height: .8rem !important;
+.progress {
+  height: 0.8rem !important;
 }
-.progress .progress-bar{
-  margin-right: .1rem;
+.progress .progress-bar {
+  margin-right: 0.1rem;
 }
 
 .stats {
-	height: 10rem;
+  height: 10rem;
   background: var(--primary-1);
   border-radius: 0.5rem;
   transition: background 0.5s;
@@ -40,53 +40,44 @@
   }
 }
 
-/* #salesDonut{
-  height: 6rem;
-  width:6rem;
+#ordersCount {
+  height: 7rem;
+  width: 7rem;
   position: relative;
   background: transparent;
   float: right;
-  border-left: 0.5rem solid var(--hover);
-  border-top: 0.5rem solid var(--hover);
-  border-right: 0.5rem solid var(--info);
-  border-bottom: 0.5rem solid var(--danger);
+  top: -19%;
+  border: 0.2rem solid var(--hover);
   border-radius: 50%;
-  animation:donut 5s ease-in-out infinite;
+  animation: donut 5s ease-in-out infinite;
 }
 
-@keyframes donut{
-  0%,100%{
-    transform: rotate(0deg);
+@media screen and (max-width: 1200px) {
+  #ordersCount {
+    height: 6rem;
+    width: 6rem;
+    top: -15%;
   }
-  25%{
-    transform: rotate(45deg);
+  #ordersCount h4 {
+    font-size: medium !important;
   }
-  50%{
-    transform: rotate(45deg);
-  }
-  80%{
-    transform: rotate(360deg);
-  }
-  90%{
-    transform: rotate(360deg);
-  }
-} */
+}
 
-#brandSales li{
+#brandSales li {
   font-size: small;
 }
 
-.compareUp{
-  color:var(--up);
+.compareUp {
+  color: var(--up);
   height: 1rem;
-  width:3rem;
+  width: 3rem;
   background: #0cf03227;
-  border-radius:0.5rem;
+  border-radius: 0.5rem;
 }
-.compareDown{
-  color:var(--down);
+.compareDown {
+  color: var(--down);
   height: 1rem;
-  width:3rem;
+  width: 3rem;
   background: #fc080828;
-  border-radius:0.5rem;
+  border-radius: 0.5rem;
 }
