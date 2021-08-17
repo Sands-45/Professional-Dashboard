@@ -1,5 +1,28 @@
 //Dash One ===================
+var options = {
+  series: [44, 55, 20],
+  chart: {
+    type: "donut",
+    height:150,
+  },
+  labels: ["Deb", "Steers", "Fish"],
+  fill: {
+    colors: ["#0c6ffd", "#dc3545", "#0ccbf0"],
+  },
+  stroke: {
+    show: false,
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  legend: {
+    position: "bottom",
+    offsetY: -5,
+  },
+};
 
+var chart = new ApexCharts(document.querySelector("#salesDonut"), options);
+chart.render();
 /* ===============Chart One ===========*/
 let options3 = {
   series: [
@@ -116,4 +139,3 @@ let options4 = {
 };
 const chart4 = new ApexCharts(document.querySelector("#chart4"), options4);
 chart4.render();
-

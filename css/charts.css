@@ -40,7 +40,7 @@
   }
 }
 
-#salesDonut{
+/* #salesDonut{
   height: 6rem;
   width:6rem;
   position: relative;
@@ -70,7 +70,7 @@
   90%{
     transform: rotate(360deg);
   }
-}
+} */
 
 #brandSales li{
   font-size: small;
