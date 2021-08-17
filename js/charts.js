@@ -188,3 +188,51 @@ let options4 = {
 };
 const chart4 = new ApexCharts(document.querySelector("#chart4"), options4);
 chart4.render();
+
+//Dash One ===================
+
+/* ==================Trend ============*/
+var trend = {
+  series: [
+    {
+      data: [
+        400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380, 325, 125, 897, 564,
+        785,
+      ],
+    },
+  ],
+  chart: {
+    type: "bar",
+    toolbar: {
+      show: false,
+      tools: {
+        download: false,
+      },
+    },
+  },
+  plotOptions: {
+    bar: {
+      borderRadius: 1,
+    },
+  },
+  dataLabels: {
+    enabled: false,
+  },
+  xaxis: {
+    labels: {
+      formatter: function (value) {
+        return;
+      },
+    },
+  },
+  grid: {
+    yaxis: {
+      lines: {
+        show: false,
+      },
+    },
+  },
+};
+
+var trend = new ApexCharts(document.querySelector("#trend"), trend);
+trend.render();

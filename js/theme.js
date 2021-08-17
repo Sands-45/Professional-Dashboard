@@ -1,7 +1,7 @@
 /* =================Theme Switcher ==============*/
 const themeSwitcher = document.querySelector(".themeSwitch");
 let theme = localStorage.getItem("theme");
-
+// Light Theme ==========
 function lightTheme() {
   document.body.style.background = "#e0fbfc";
   document
@@ -35,7 +35,7 @@ function lightTheme() {
   document.querySelector(".themeIcon").classList.remove("bi-sun-fill");
   document.querySelector(".themeIcon").classList.add("bi-moon-stars-fill");
 }
-
+//Dark Theme =================
 function darkTheme() {
   document.body.style.background = "#0a1726";
   document
