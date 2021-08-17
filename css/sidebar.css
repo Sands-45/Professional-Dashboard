@@ -89,7 +89,7 @@ ul .active{
   #sideNav {
   position: absolute;
   left: 0;
-  background: #0a172691;
+  background: #131f2d;
   height: 100vh;
   width: 14rem !important;
   z-index: 11;
@@ -101,7 +101,7 @@ ul .active{
 /*========Socials====================*/
 #socials{
   width: 70%;
-  margin-bottom: 31%;
+  margin-bottom: 30%;
 }
 .socials a{
   text-decoration: none;
