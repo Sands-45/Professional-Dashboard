@@ -1,3 +1,4 @@
+// =========== JSON Request
 //Dash One ===================
 /* ============Total Orders =======*/
 var totalOrders = {
@@ -189,18 +190,21 @@ let options4 = {
 const chart4 = new ApexCharts(document.querySelector("#chart4"), options4);
 chart4.render();
 
-//Dash One ===================
+//Dash Two ===================
+let xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function () {
+  if (this.readyState == 4 && this.status == 200) {
+    let response = JSON.parse(xhttp.responseText);
+    var dataS = response.yearly;
+    console.log(dataS);
+  }
+};
+xhttp.open("GET", "../incomplete_calls.json", true);
+xhttp.send();
 
 /* ==================Trend ============*/
 var trend = {
-  series: [
-    {
-      data: [
-        400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380, 325, 125, 897, 564,
-        785,
-      ],
-    },
-  ],
+  series: [],
   chart: {
     type: "bar",
     toolbar: {
@@ -219,6 +223,7 @@ var trend = {
     enabled: false,
   },
   xaxis: {
+    type: "numeric",
     labels: {
       formatter: function (value) {
         return;
@@ -236,45 +241,48 @@ var trend = {
 var trend = new ApexCharts(document.querySelector("#trend"), trend);
 trend.render();
 
- /*===================== Comparison Chart ==============*/
- var monochrome = {
-   series: [42, 47, 52, 58, 65],
-   chart: {
-     width: 380,
-     type: "polarArea",
-   },
-   labels: ["Online", "Google", "Youtube", "Ads", "Twitter"],
-   fill: {
-     opacity: 1,
-   },
-   stroke: {
-     width: 1,
-     colors: undefined,
-   },
-   yaxis: {
-     show: false,
-   },
-   legend: {
-     position: "bottom",
-   },
-   plotOptions: {
-     polarArea: {
-       rings: {
-         strokeWidth: 0,
-       },
-       spokes: {
-         strokeWidth: 0,
-       },
-     },
-   },
-   theme: {
-     monochrome: {
-       enabled: true,
-       shadeTo: "light",
-       shadeIntensity: 0.6,
-     },
-   },
- };
+/*===================== Comparison Chart ==============*/
+var monochrome = {
+  series: [42, 47, 52, 58, 65],
+  chart: {
+    width: 380,
+    type: "polarArea",
+  },
+  labels: ["Online", "Google", "Youtube", "Ads", "Twitter"],
+  fill: {
+    opacity: 1,
+  },
+  stroke: {
+    width: 1,
+    colors: undefined,
+  },
+  yaxis: {
+    show: false,
+  },
+  legend: {
+    position: "bottom",
+  },
+  plotOptions: {
+    polarArea: {
+      rings: {
+        strokeWidth: 0,
+      },
+      spokes: {
+        strokeWidth: 0,
+      },
+    },
+  },
+  theme: {
+    monochrome: {
+      enabled: true,
+      shadeTo: "light",
+      shadeIntensity: 0.6,
+    },
+  },
+};
 
- var monochrome = new ApexCharts(document.querySelector("#monochrome"), monochrome);
- monochrome.render();
+var monochrome = new ApexCharts(
+  document.querySelector("#monochrome"),
+  monochrome
+);
+monochrome.render();
