@@ -39,21 +39,37 @@ toggleSideBtn.addEventListener("click", () => {
 });
 
 /* ============= Active Tab =============*/
-// tablinks = document.querySelectorAll(".sideNav");
-// tablinks.forEach((item) => {
-//   item.className = item.className.replace(" active", "");
-// });
+// function openTab(evt, tabName) {
+//   let i, x, tablinks;
+//   x = document.querySelectorAll(".tabContent");
+//   for (i = 0; i < x.length; i++) {
+//     x[i].style.display = "none";
+//   }
+//   tablinks = document.querySelectorAll(".sideNav");
+//   for (i = 0; i < x.length; i++) {
+//     tablinks[i].className = tablinks[i].className.replace(" active", "");
+//   }
+//   document.getElementById(tabName).style.display = "flex";
+//   evt.currentTarget.className += " active";
+// }
 
-function openTab(evt, tabName) {
-  let i, x, tablinks;
-  x = document.querySelectorAll(".tabContent");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  tablinks = document.querySelectorAll(".sideNav");
-  for (i = 0; i < x.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(tabName).style.display = "flex";
-  evt.currentTarget.className += " active";
+let navLinks = document.getElementsByClassName("sideNav");
+let linksContent = document.getElementsByClassName("tabContent");
+for (let i = 0; i < navLinks.length; i++) {
+  navLinks[i].addEventListener("click", () => {
+    Array.prototype.forEach.call(navLinks, (item) =>
+      item.classList.remove("active")
+    );
+    navLinks[i].classList.add("active");
+    for (let j = 0; j < linksContent.length; j++) {
+      if (
+        navLinks[i].id == linksContent[j].id &&
+        navLinks[i].classList.contains("active") == true
+      ) {
+        linksContent[j].style.display = "flex";
+      } else {
+        linksContent[j].style.display = "none";
+      }
+    }
+  });
 }
