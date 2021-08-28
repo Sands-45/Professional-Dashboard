@@ -1,3 +1,4 @@
+"use strict";
 // =========== JSON Request
 //Dash One ===================
 /* ============Total Orders =======*/
@@ -192,11 +193,12 @@ chart4.render();
 
 //Dash Two ===================
 let xhttp = new XMLHttpRequest();
+let z;
 xhttp.onreadystatechange = function () {
   if (this.readyState == 4 && this.status == 200) {
-    let response = JSON.parse(xhttp.responseText);
-    var dataS = response.yearly;
-    console.log(dataS);
+    var response = JSON.parse(xhttp.responseText);
+    z = response.yearly;
+    console.log(z);
   }
 };
 xhttp.open("GET", "../incomplete_calls.json", true);
@@ -204,7 +206,6 @@ xhttp.send();
 
 /* ==================Trend ============*/
 var trend = {
-  series: [],
   chart: {
     type: "bar",
     toolbar: {
@@ -214,6 +215,7 @@ var trend = {
       },
     },
   },
+  series: [],
   plotOptions: {
     bar: {
       borderRadius: 1,
@@ -286,3 +288,15 @@ var monochrome = new ApexCharts(
   monochrome
 );
 monochrome.render();
+
+
+async function start() {
+  let file = "../incomplete_calls.json";
+  let data = await (await fetch(file)).json();
+  // ...
+  console.log(data.yearly);
+  trend.series = [{data:[data.yearly[0]]}];
+}
+start();
+
+

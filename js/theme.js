@@ -1,3 +1,4 @@
+"use strict";
 /* =================Theme Switcher ==============*/
 const themeSwitcher = document.querySelector(".themeSwitch");
 let theme = localStorage.getItem("theme");
